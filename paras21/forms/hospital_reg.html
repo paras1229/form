@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Registration Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body background="hospital.jpg">
+    <div class="container">
+    <u><h2 class="poppins" align="center">Hospital Registration Form</h2></u><br>
+        
+    <form class="poppins" name="HospitalForm" method="post" action="user.php">
+    <input type="hidden" name="form_type" value="hospital_form" />
+            <div class="form-group">
+                <label>Patient Name :</label>
+                <input type="text" name="patient_name" required>
+            </div>
+            <div class="form-group">
+                <label>Date of birth :</label>
+                <input type="date" name="dob" required />
+            </div>
+            <div class="form-group">
+                <label>Gender :</label>
+                <select name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Contact No. :</label>
+                <input type="tel" name="phone_num" required />
+            </div>
+            <div class="form-group">
+                <label>Email :</label>
+                <input type="email" name="email" required />
+            </div>
+            <div class="form-group">
+                <label>Policy No. (optional...) :</label>
+                <input type="tel" name="policy_num"/>
+            </div>
+            <div class="form-group">
+                <label>Insurance Provider (optional...) :</label>
+                <input type="text" name="ins_provider"/>
+            </div>
+            <div class="form-group">
+                <label>Registration Date :</label>
+                <input type="date" name="reg_date" required>
+            </div>
+            <div class="form-group">
+                <label>Registration Time :</label>
+                <input type="time" name="reg_time" required>
+            </div>
+            <div class="form-group">
+                <label>Payment Method :</label>
+                <select id="payment_method" name="payment_method" required >
+                    <option value="cash">Cash</option>
+                    <option value="credit/debit">Credit/Debit</option>
+                    <option value="insurance">Insurance</option>
+                    <option value="other">Other...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Payment Amount :</label>
+                <input type="number" name="amount" min="10" required>
+            </div>
+            <div>
+                <button class="poppins" class="form-group" type="submit" name="submit" >Submit</button></div>
+    </form>
+    </div>
+</body>
+</html>
+
+<!--css-->
+<style>
+    body {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100%;
+        background-size:cover;
+        background-position: center;
+    }
+    h2 {
+        color: white;
+        text-shadow: 1px 1px 4px #0000007d;
+    }
+    u { color:rgb(255, 43, 43);}
+    .poppins {
+       font-family: "Poppins", serif;
+       font-weight: 500;
+       font-style: normal;
+    }
+    .container {
+        max-width:400px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: #f9f9f900;
+        backdrop-filter: blur(5px) ;
+        background: rgba(0, 0, 0, 0.187);
+    }
+    .form-group {
+        margin-bottom: 20px;
+        padding-left: 10px;
+    }
+    label {
+        color: white;
+        font-size: 14px;
+        text-shadow: 1px 1px 3px #000000;
+    }
+    input, select {
+        width: 90%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #fcfafa;
+        border-radius: 4px;
+        background-color: #f5f4f415;
+        color: rgb(0, 0, 0);
+    }
+    select {
+        max-width: 120px;
+    }
+    option {
+        color: #000000;
+    }
+    input[type="date"]{
+        color: white;
+    }
+    input[name="address"]{
+        padding-bottom: 70px;
+    }
+    button[name="submit"] {
+        background-color: #28a745;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 92%;
+        margin-left: 10px;
+    }   
+</style>
