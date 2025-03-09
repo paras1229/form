@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>form validation @pxxrxs</title>
+    </head>
+    <body>
+    <h2 align="center">Form Validation</h2>
+    <form name="login" onsubmit="return validateform()">
+           
+        Name: <input type="text" id="name" /><br>
+        Password: <input type="text" id="password" /><br>
+        Confirm Password: <input type="text" id="cpass" /><br>
+        Number: <input type="text" id="number" /><br>
+        <!--button-->
+        <input type="submit" value="submit" /> or
+        <input type="reset" value="reset" />
+
+    </form>
+    </body>
+</html>
+
+<!--js-->
+<script>
+function validateform()
+{
+        const name=document.getElementById("name").value;
+        const password=document.getElementById("password").value;
+        const cpass=document.getElementById("cpass").value;
+        const number=document.getElementById("number").value;
+
+        if(name=="" || name.length<4 || isNaN(name)==false)
+        {
+            alert("enter your name");
+            return false;
+        }
+    
+       if(password=="" || password.length<8)
+       {
+            alert("password must be 8 letter");
+            return false;
+       }
+    
+       if(cpass!=password)
+       {
+            alert("not match with password");
+            return false;
+       }
+    
+       if(isNaN(number)==true || number.length!=10)
+       {
+           alert("enter 10 digit number");
+           return false;
+       }
+}
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>change color by buttons</title>
+    </head>
+<body>
+    <h2 align="center">Tap Buttons For changing BG color</h2><br><br>
+    <button onclick="changeColor('blue')">Blue</button>&nbsp;&nbsp;
+    <button onclick="changeColor('red')">Red</button>&nbsp;&nbsp;
+    <button onclick="changeColor('pink')">Pink</button>&nbsp;&nbsp;
+    <button onclick="changeColor('black')">Black</button>&nbsp;&nbsp;
+    <button onclick="changeColor('green')">Green</button>
+</body>
+</html>
+
+<!--css-->
+<style>
+ body{
+    transition: background-color 0.5s ease;
+ }
+</style>
+
+<!--js-->
+<script>
+    function changeColor(color)
+    {
+        document.body.style.backgroundColor= color;
+    }
+</script>

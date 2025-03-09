@@ -1,0 +1,55 @@
+<html>
+<head>
+<title> form validation </title>
+</head>
+<body>
+<h2 align="center"> form validation </h2>
+<form name="login" onsubmit="return validateform()">
+
+	Name: <input type="text" id="name" > <br>
+	Password: <input type="text" id="pass" > <br>
+	Confirm password: <input type="text" id="cpass"><br>
+	Number: <input type="text" id="num"> <br>
+	<!--button-->
+	<input type="submit" value="submit">&nbsp;&nbsp;
+	<input type="reset" value="reset">
+	
+</form>
+</body>
+</html>
+
+<!--js-->
+<script>
+function validateform()
+{
+   const name=document.getElementById("name").value;
+   const pass=document.getElementById("pass").value;
+   const cpass=document.getElementById("cpass").value;
+   const num=document.getElementById("num").value;
+	
+	if(name=="")
+	{
+	  alert("enter your name first");
+	  return false;
+	}
+	
+	if(pass=="" || pass.length<8)
+	{
+	  alert("password must be 8 letters");
+	  return false;
+	}
+	
+	if(cpass!=pass)
+	{
+	  alert("password does not match");
+	  return false;
+	}14
+	
+	if(num=="" || num.lenght<10)
+	{
+	  alert(" enter 10 digit number");
+	  return false;
+	}
+}
+</script>
+	

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>email validation</title>
+</head>
+<body bgcolor="aqua">
+
+ Email-Id <input type="text" id="emailid" name="emailid" />
+ <input type="submit" value="submit" onclick="validate()" /> <!--button-->
+ 
+ </body>
+ </html>
+ 
+ <!--js-->
+ <script>
+ 
+ function validate()
+ {
+ 
+   const email=document.getElementById("emailid").value;
+   var email_pattern=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+   
+   if(email==" " || email_pattern.test(email)==false)
+   {
+      alert("enter correct email id.");
+	  return false;
+    }
+	else
+	{
+	   alert("email is correct");
+	   return true;
+	}
+}
+
+</script>
+ 
+ 
