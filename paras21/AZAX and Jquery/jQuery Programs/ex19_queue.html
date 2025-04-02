@@ -1,0 +1,22 @@
+<html>
+<head>
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+   var div = $("div");
+   div.animate({height:'600px',opacity:'0.6'},5000);
+   div.animate({width:'800px',opacity:'0.7'},5000);
+   div.animate({height:'100px',opacity:'0.8'},5000);
+   div.animate({width:'100px',opacity:'0.9'},5000);
+ });
+
+});
+</script>
+</head>
+
+<body>
+     <button> Start Animation </button> 
+     <div style="background:#DD00FF; height:100px; width:100px; position:absolute;"></div>
+</body>  
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head>
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("input").focus(function(){
+		$(this).css("background-color","#FF0000");  });
+	$("input").blur(function(){
+		$(this).css("background-color","#0000FF");  });
+
+});
+</script>
+</head>
+<body><h1>
+   Enter your Name : <input type="text" name="fname"> </br>
+   Enter your Email : <input type="text" name="email"> </br>   
+   Enter your Age : <input type="text" name="age"> </br>   </h1>
+</body>
+</html>

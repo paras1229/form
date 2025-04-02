@@ -1,0 +1,30 @@
+<html>
+<head>
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function(){
+
+$("#button").click(function(){
+   $("#div1").fadeIn();
+   $("#div2").fadeIn("slow");
+   $("#div3").fadeIn(3000);
+ });
+
+$("button").click(function(){
+   $("#div1").fadeOut();
+   $("#div2").fadeOut("slow");
+   $("#div3").fadeOut(3000);
+ });
+
+});
+</script>	 </head>
+<body>
+   <h1> <p> Demonstration of FadeOut() with different parameters </p>
+    <button> Click to fade out boxes </button></h1>
+    <p style="width:200px;height:25px;background-color:red;" id="button"> Click to fade in boxes </p>	   <br><br>
+    
+     <div id="div1" style="width:120px;height:120px;display:none;background-color:red;">1</div><br>
+     <div id="div2" style="width:120px;height:120px;display:none;background-color:green;">2</div><br>
+     <div id="div3" style="width:120px;height:120px;display:none;background-color:blue;">3</div><br>
+</body>
+</html>

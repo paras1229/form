@@ -1,0 +1,25 @@
+<html>
+<head>
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+   $("#div1").fadeTo("Slow",0.15);
+   $("#div2").fadeTo("Slow",0.25);
+   $("#div3").fadeTo("Slow",0.50);
+ });
+
+}); 
+</script>
+</head>
+
+<body>
+  <h1>  <p> Demonstration of FadeTo() with different parameters </p>
+    <button> Click to fade to boxes </button>
+    <br><br>
+    
+     <div id="div1" style="width:80px;height:80px;background-color:red;">1</div><br>
+     <div id="div2" style="width:80px;height:80px;background-color:green;">2</div><br>
+     <div id="div3" style="width:80px;height:80px;background-color:blue;">3</div><br></h1>
+</body>
+</html>
